@@ -151,11 +151,11 @@ function Board() {
             setTimeout(() => setPassMessage(""), 3000); // 3秒で消える
         } else {
             setGameOver(true);
-            const { black, white } = countStones();
-            setHistory(prev => [
-                ...prev,
-                { black, white, winner: black > white ? '黒' : white > black ? '白' : '引き分け' }
-            ]);
+            // const { black, white } = countStones();
+            // setHistory(prev => [
+            //     ...prev,
+            //     { black, white, winner: black > white ? '黒' : white > black ? '白' : '引き分け' }
+            // ]);
         }
     };
 
@@ -208,11 +208,11 @@ function Board() {
             setCurrentPlayer(nextPlayer);
         } else if (!currentCanMove && !nextCanMove) {
             setGameOver(true);
-            const { black, white } = countStones();
-            setHistory(prev => [
-                ...prev,
-                { black, white, winner: black > white ? '黒' : white > black ? '白' : '引き分け' }
-            ]);
+            // const { black, white } = countStones();
+            // setHistory(prev => [
+            //     ...prev,
+            //     { black, white, winner: black > white ? '黒' : white > black ? '白' : '引き分け' }
+            // ]);
         }
     }, [board, currentPlayer, gameOver, hasValidMove, countStones]);
 
